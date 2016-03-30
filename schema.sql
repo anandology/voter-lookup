@@ -1,6 +1,6 @@
 
 create table voter (
-	state char(2)
+	state char(2),
 	ac smallint,
 	pb smallint,
 	voterid text	

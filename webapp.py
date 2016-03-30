@@ -10,7 +10,7 @@ urls = (
 app = web.application(urls, globals())
 application = app.wsgifunc()
 
-dbfile = os.getenv("VOTER_LOOKUP_DATABASE", "voter.db")
+dbfile = os.getenv("VOTER_LOOKUP_DATABASE", "voter-lookup.db")
 print("using the sqlite database:", dbfile)
 
 db = web.database(dbn="sqlite", db=dbfile)

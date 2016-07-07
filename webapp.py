@@ -29,8 +29,8 @@ class index:
 
 class search:
     def GET(self):
-        i = web.input(voterid=None, state=None)
-        voter = get_voters(i.voterid, state=i.state)
+        i = web.input(voterid="", state=None)
+        voter = get_voters(i.voterid.upper(), state=i.state)
         web.header("Content-Type", "application/json")
         return json.dumps(voter, indent=True)
 
